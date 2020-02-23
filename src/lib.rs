@@ -20,3 +20,13 @@ macro_rules! json {
     ($val: expr) => { ::actix_helper_macros::Response::Json($val) };
 }
 
+#[macro_export]
+macro_rules! or_404 {
+    ($item: expr) => {
+        match $item {
+            None => { return Ok(code!(NotFound)) }
+            Some(v) => v
+        }
+    }
+}
+
