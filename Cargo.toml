@@ -12,5 +12,8 @@ edition = "2018"
 actix-web = "~2"
 serde = "~1"
 
-actix-proc-macros = {path = "actix-proc-macros", version = "~0.1"}
+actix-proc-macros = "~0.1"
+
+[patch.crates-io]
+actix-proc-macros = {path = "actix-proc-macros"}
 
