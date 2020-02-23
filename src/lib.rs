@@ -10,3 +10,8 @@ pub enum Response<T: serde::Serialize> {
 	Builder(actix_web::dev::HttpResponseBuilder)
 }
 
+#[macro_export]
+macro_rules! code {
+    ($code: ident) => { ::actix_helper_macros::Response::Builder(::actix_web::HttpResponse::$code()) }
+}
+
