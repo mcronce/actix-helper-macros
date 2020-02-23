@@ -4,7 +4,7 @@ description = "Helper macros to make life easier developing actix-web applicatio
 repository = "https://github.com/mcronce/actix-helper-macros"
 license = "MIT"
 keywords = ["actix", "http", "web", "async"]
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Mike Cronce <mike@cronce.io>"]
 edition = "2018"
 
