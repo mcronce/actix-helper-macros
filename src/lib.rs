@@ -15,3 +15,8 @@ macro_rules! code {
     ($code: ident) => { ::actix_helper_macros::Response::Builder(::actix_web::HttpResponse::$code()) }
 }
 
+#[macro_export]
+macro_rules! json {
+    ($val: expr) => { ::actix_helper_macros::Response::Json($val) };
+}
+
