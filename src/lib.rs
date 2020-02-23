@@ -4,6 +4,9 @@ extern crate serde;
 extern crate actix_proc_macros;
 pub use actix_proc_macros::*;
 
+#[allow(type_alias_bounds)] // Even if this isn't enforced, I want to express intent explicitly to human readers
+pub type ResponderResult<T: serde::Serialize> = Result<Response<T>, Box<dyn std::error::Error>>;
+
 pub enum Response<T: serde::Serialize> {
 	Json(T),
 	Text(String),
