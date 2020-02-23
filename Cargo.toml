@@ -9,5 +9,8 @@ authors = ["Mike Cronce <mike@cronce.io>"]
 edition = "2018"
 
 [dependencies]
+actix-web = "~2"
+serde = "~1"
+
 actix-proc-macros = {path = "actix-proc-macros"}
 
