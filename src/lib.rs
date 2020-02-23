@@ -19,6 +19,11 @@ macro_rules! code {
 }
 
 #[macro_export]
+macro_rules! text {
+	($val: expr) => { ::actix_helper_macros::Response::Text($val.to_string()) };
+}
+
+#[macro_export]
 macro_rules! json {
     ($val: expr) => { ::actix_helper_macros::Response::Json($val) };
 }
